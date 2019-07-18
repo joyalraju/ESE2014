@@ -1,0 +1,13 @@
+n1 = [0:3]; 
+x1 = [1 2 2 1]; 
+n2 = [0:7]; 
+x2 = [x1 x1];
+w=[-500:1:500]*pi/500; 
+X1 = dtft(x1,n1,w); 
+magX1 = abs(X1); 
+subplot(2,1,1);
+plot(w/pi,magX1); grid; title ('magnitude part'); ylabel ('magnitude');
+X2 = dtft(x2,n2,w); 
+magX2 = abs(X2); 
+subplot(2,1,2);
+plot(w/pi,magX2); grid; title ('magnitude part'); ylabel ('magnitude');
